@@ -1,0 +1,127 @@
+@import "./Global.scss";
+
+$leftBackground: #2d4059;
+$overlayBackground: #f07b3f;
+$rightBackground: #252e3b;
+$introText: lightyellow;
+$sliderColor: lightyellow;
+
+.mainContainer {
+  @extend %flex_MainContainer;
+}
+
+.leftContainer {
+  @extend %flex_MainContainer;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  background: $leftBackground;
+  color: whitesmoke;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    justify-content: flex-start;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 10%;
+  left: 8%;
+  margin: 20px;
+  border-top: 300px solid transparent;
+  border-left: 52vw solid $overlayBackground; // goldenrod;
+  border-bottom: 300px solid transparent;
+}
+
+.rightContainer {
+  @extend %flex_MainContainer;
+  flex-direction: column;
+  width: 40vw;
+  background-color: $rightBackground; // #101820ff;
+  align-items: center;
+  justify-content: center;
+
+  .intro {
+    margin: 4rem 0 0 -2rem;
+
+    h1 {
+      color: $introText; // #fee715ff;
+      font-size: 60px;
+      font-weight: 300;
+    }
+
+    span {
+      font-size: 40px;
+      font-weight: 100;
+    }
+  }
+
+  .slider {
+    width: 2rem;
+    height: 4rem;
+    display: flex;
+    border: 2px solid $sliderColor;
+    border-radius: 2rem;
+
+    span {
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      background-color: $sliderColor;
+      border-radius: 50%;
+      margin: auto;
+      animation: move-slider 1s linear infinite;
+    }
+  }
+
+  .arrow {
+    span {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid transparent;
+      border-right-color: $sliderColor;
+      border-bottom-color: $sliderColor;
+      transform: rotate(45deg);
+      animation: blinking-arrow 0.5s alternate infinite;
+    }
+  }
+}
+
+@keyframes move-slider {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes blinking-arrow {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

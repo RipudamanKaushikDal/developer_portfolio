@@ -1,4 +1,5 @@
 import LandingPage from "./LandingPage";
+import Projects from "./Projects";
 import styles from "./styles/Index.module.scss"
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className={styles.global} >
       
       <LandingPage />
+      <Projects />
 
     </div>
   )

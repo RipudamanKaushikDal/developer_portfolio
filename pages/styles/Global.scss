@@ -5,3 +5,10 @@
   margin: 0;
   padding: 0;
 }
+
+%centered_flex {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

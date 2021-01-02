@@ -40,6 +40,11 @@ $sliderColor: lightyellow;
   border-top: 300px solid transparent;
   border-left: 52vw solid $overlayBackground; // goldenrod;
   border-bottom: 300px solid transparent;
+  transition: transform 0.2s ease-in-out;
+}
+
+.overlay:hover {
+  transform: translateX(20px);
 }
 
 .rightContainer {

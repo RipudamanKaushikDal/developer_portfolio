@@ -57,11 +57,11 @@ function Projects() {
                         </Carousel>
                     </div>
                     
-                        
-                    
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi ab dolores aspernatur laboriosam facere, minus non odio aperiam, ipsum nemo nobis. Dolore nulla ut, quibusdam quo velit officia ipsum?
-                    </p>
+                    <div className={styles.projectDescription}>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi ab dolores aspernatur laboriosam facere, minus non odio aperiam, ipsum nemo nobis. Dolore nulla ut, quibusdam quo velit officia ipsum?
+                        </p>
+                    </div>    
                 </section>
             ) :
             (<section className={styles.placeholder}>

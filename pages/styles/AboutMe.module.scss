@@ -1,0 +1,39 @@
+@import "./Global.scss";
+
+.back {
+  @extend %flex_MainContainer;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 5px;
+  backdrop-filter: blur(30px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(119, 3, 52, 0.5);
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  z-index: 2;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.about:hover {
+  transform: rotateY(15deg);
+}

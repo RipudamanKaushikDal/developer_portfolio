@@ -15,8 +15,8 @@ function Contact() {
                     <span className={styles.labels}>Email</span>
                     <span className={styles.line}></span>
                 </div>
-                <div className={styles.fields}>
-                    <textarea  name="message" required rows={4}/>
+                <div className={styles.message}>
+                    <textarea  name="message" required/>
                     <span className={styles.labels}>Message</span>
                     <span className={styles.line}></span>
                 </div>
